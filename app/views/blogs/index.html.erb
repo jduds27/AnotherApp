@@ -7,7 +7,7 @@
     <p><%= blog.body %></p>
     <%= link_to 'Show', blog %>
 
-    <%= link_to 'Delete Post', blog, method: :delete, data: { confirm: 'Are you sure?' }%>
+    <%= link_to 'Delete Post', blog, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %>
 
 
 <% end %>
@@ -15,4 +15,4 @@
 <br>
 
 
-<%= link_to 'New Blog', new_blog_path %>
+<%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>

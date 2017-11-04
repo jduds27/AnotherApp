@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
 
   def index
     @blogs = Blog.all
@@ -29,7 +30,7 @@ class BlogsController < ApplicationController
 
   def update
     respond_to do |format|
-      if @blog.save
+      if @blog.update
         format.html { redirect_to @blog, notice: 'Blog was successfully updated.' }
       else
         format.html { render :new }
