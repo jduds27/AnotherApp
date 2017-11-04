@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
     <title>AnotherApp</title>
     <%= csrf_meta_tags %>
 
@@ -9,18 +12,19 @@
   </head>
 
   <body>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
 
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      <% if current_user %>
-      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-      <% else %>
-      <%= link_to "Sign up", new_user_registration_path %>
-      <%= link_to "Login", new_user_session_path %>
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
 
-      <% end %>
-    <%= yield %>
+          <%= yield %>
 
-    <%= login_helper %>
+          
+    
+        </div>
+      </div>
+    </div>
   </body>
 </html>

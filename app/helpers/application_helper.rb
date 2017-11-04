@@ -9,3 +9,32 @@ module ApplicationHelper
     end
   end
 end
+
+def nav_items
+  [
+    {
+      url: root_path,
+      title: 'Home'
+    },
+    {
+      url: about_path,
+      title: 'About Me'
+    },
+    {
+      url: contact_path,
+      title: 'Contact'
+    },
+    {
+      url: blogs_path,
+      title: 'Blog'
+    },
+    {
+      url: deals_path,
+      title: 'Deals'
+    },
+    {
+      url: news_path,
+      title: 'News'
+    },
+  ]
+end
