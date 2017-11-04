@@ -30,7 +30,7 @@ class BlogsController < ApplicationController
 
   def update
     respond_to do |format|
-      if @blog.save
+      if @blog.update
         format.html { redirect_to @blog, notice: 'Blog was successfully updated.' }
       else
         format.html { render :new }
