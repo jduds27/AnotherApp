@@ -1,5 +1,10 @@
 @import "bootstrap";
 
+@font-face {
+  font-family: NeonTubes;
+  src: url('NeonTubes.otf');
+}
+
 
 /*
  * Globals
@@ -74,16 +79,16 @@ body {
 }
 
 .nav-masthead .nav-link {
-  padding: .25rem 0;
+  font-family: NeonTubes;
   font-weight: 700;
-  color: rgba(255,255,255,.5);
+  color: rgba(88, 156, 211, 0.5);
   background-color: transparent;
   border-bottom: .25rem solid transparent;
 }
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255,255,255,.25);
+  border-bottom-color: rgba(65, 197, 87, 0.548);
 }
 
 .nav-masthead .nav-link + .nav-link {
