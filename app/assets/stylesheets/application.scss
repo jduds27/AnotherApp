@@ -102,12 +102,15 @@ body {
 
 @media (min-width: 48em) {
   .masthead-brand {
+    font-family: NeonTubes;
     float: left;
   }
   .nav-masthead {
     float: right;
   }
 }
+
+
 
 
 /*
@@ -164,6 +167,6 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 42rem;
+    width: 65rem;
   }
 }

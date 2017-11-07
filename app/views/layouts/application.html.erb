@@ -11,14 +11,15 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <header class="masthead clearfix">
-            <div class="inner">
-              <h3 class="masthead-brand">Getit</h3>
-              <nav class="nav nav-masthead">
-              <%= nav_helper "nav-link", 'span' %>
-              </nav>
-            </div>
-          </header>
+  <div class="masthead clearfix">
+    <div class="inner">
+      <nav class="nav nav-masthead app-nav">
+      <h3 class="masthead-brand">Getit</h3>
+      <%= nav_helper "nav-link", 'span' %>
+      <%= login_helper "nav-link" %>
+      </nav>
+    </div>
+  </div>
 
   <body>
     <div class="site-wrapper">
@@ -29,8 +30,6 @@
           <p class="alert"><%= alert %></p>
 
           <%= yield %>
-
-          
     
         </div>
       </div>
